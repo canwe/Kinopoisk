@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1544879162">
+    <data-source source="LOCAL" name="H2 - project_kinopoisk" uuid="5df45d90-4c58-494b-acd2-914cf18ad785">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:c:/Java/h2db/project_kinopoisk</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

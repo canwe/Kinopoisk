@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="H2 - project_kinopoisk" uuid="5df45d90-4c58-494b-acd2-914cf18ad785">
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <schema-pattern>PROJECT_KINOPOISK.PUBLIC</schema-pattern>
+      <default-schemas>PROJECT_KINOPOISK.PUBLIC</default-schemas>
+    </data-source>
+  </component>
+</project>

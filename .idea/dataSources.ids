@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="H2 - project_kinopoisk" uuid="5df45d90-4c58-494b-acd2-914cf18ad785">
+    <database-info product="H2" version="1.4.181 (2014-08-06)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.181 (2014-08-06)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="PROJECT_KINOPOISK"/>
+    <table name="MOVIES" schema="PUBLIC" catalog="PROJECT_KINOPOISK" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNkU1MDhGMkNfQzQ4Q180MjQyX0EyNEJfODZGMUE3M0EzM0JCKQ==" autoIncrement="true"/>
+      <column name="DESCRIPTION" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="GENRE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RATING" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="YEAR" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_8" columns="ID"/>
+      <exported-key name="FK_83RFXR4DXBWCU2FXY1LPXE58V" table="MOVIE_PERSONS" schema="PUBLIC" catalog="PROJECT_KINOPOISK" columns="MOVIE_ID"/>
+    </table>
+    <table name="MOVIE_PERSONS" schema="PUBLIC" catalog="PROJECT_KINOPOISK" type="TABLE">
+      <column name="MOVIE_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="PERSON_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <foreign-key name="FK_83RFXR4DXBWCU2FXY1LPXE58V" columns="MOVIE_ID" ref-table="MOVIES" ref-schema="PUBLIC" ref-catalog="PROJECT_KINOPOISK" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+      <foreign-key name="FK_B40WPO2NB99MHWWIJ98RWS6RI" columns="PERSON_ID" ref-table="PERSONS" ref-schema="PUBLIC" ref-catalog="PROJECT_KINOPOISK" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+      <index name="FK_83RFXR4DXBWCU2FXY1LPXE58V_INDEX_5" unique="false" columns="MOVIE_ID"/>
+      <index name="FK_B40WPO2NB99MHWWIJ98RWS6RI_INDEX_5" unique="false" columns="PERSON_ID"/>
+    </table>
+    <table name="PERSONS" schema="PUBLIC" catalog="PROJECT_KINOPOISK" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRUY5RThDMTNfQjk1N180OUJEXzhERkZfQjRDQjlEMTY4RDREKQ==" autoIncrement="true"/>
+      <column name="AWARDS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FIRSTNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LASTNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ROLE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SECONDNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_2" columns="ID"/>
+      <exported-key name="FK_B40WPO2NB99MHWWIJ98RWS6RI" table="MOVIE_PERSONS" schema="PUBLIC" catalog="PROJECT_KINOPOISK" columns="PERSON_ID"/>
+    </table>
+    <table name="USERS" schema="PUBLIC" catalog="PROJECT_KINOPOISK" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNUQ4QjBEREFfQzU2Rl80QTA4Xzk4MUNfMDc4NkEzRjgwQjE5KQ==" autoIncrement="true"/>
+      <column name="HASH_PASS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LOGIN" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ROLE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_4" columns="ID"/>
+      <index name="UK_OW0GAN20590JRB00UPG3VA2FN_INDEX_4" unique="true" columns="LOGIN"/>
+    </table>
+  </data-source>
+</component>
